@@ -162,9 +162,14 @@ input {
     display: flex;
     justify-content: center;
     padding: 20px;
+    align-items: center;
 }
 
 .techologies i {
     font-size: 50px;
+    background-color: rgb(14, 14, 14);
+}
+
+p {
     background-color: rgb(14, 14, 14);
 }
