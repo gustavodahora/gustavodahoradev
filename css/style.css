@@ -125,20 +125,33 @@ input:nth-of-type(3):checked ~ main#carousel {
 --position: 3;
 }
 
+/*  */
+
 input {
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
+
+
+/*  */
 
 .icon_media {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(14, 14, 14);
+}
+
+.icon_media a {
+    background: rgb(14, 14, 14);
 }
 
 .icon_media i {
     color: #fdfed4 !important;
     fill: white !important;
     font-size: 60px;
+    background: rgb(14, 14, 14);
 }
 
 .about_title {
