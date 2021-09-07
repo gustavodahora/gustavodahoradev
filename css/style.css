@@ -31,6 +31,7 @@ a {
 }
 
 .general_item {
+    margin-top: 20;
     display: flex;
     flex-wrap: no-wrap;
     justify-content: center;
@@ -64,58 +65,61 @@ main#carousel {
     --middle: 3;
     --position: 1;
     pointer-events: none;
-  }
+}
   
-  img.item {
-    position: absolute;
-    width: auto;
-    height: 500px;
-    background-color: coral;
-    object-fit: fill;
-    --r: calc(var(--position) - var(--offset));
-    --abs: max(calc(var(--r) * -1), var(--r));
-    transition: all 0.25s linear;
-    transform: rotateY(calc(-10deg * var(--r)))
-      translateX(calc(-300px * var(--r)));
-    z-index: calc((var(--position) - var(--abs)));
-  }
+img.item {
+position: absolute;
+width: auto;
+height: 500px;
+background-color: coral;
+object-fit: fill;
+--r: calc(var(--position) - var(--offset));
+--abs: max(calc(var(--r) * -1), var(--r));
+transition: all 0.25s linear;
+transform: rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-300px * var(--r)));
+z-index: calc((var(--position) - var(--abs)));
+}
 
-  
-  img.item:nth-of-type(1) {
-    --offset: 1;
-    background-color: #90f1ef;
-  }
-  img.item:nth-of-type(2) {
-    --offset: 2;
-    background-color: #ff70a6;
-  }
-  img.item:nth-of-type(3) {
-    --offset: 3;
-    background-color: #ff9770;
-  }
-  
-  input:nth-of-type(1) {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-  }
-  input:nth-of-type(1):checked ~ main#carousel {
-    --position: 1;
-  }
-  
-  input:nth-of-type(2) {
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-  }
-  input:nth-of-type(2):checked ~ main#carousel {
-    --position: 2;
-  }
-  
-  input:nth-of-type(3) {
-    grid-column: 4 /5;
-    grid-row: 2 / 3;
-  }
-  input:nth-of-type(3):checked ~ main#carousel {
-    --position: 3;
-  }
 
-  
+img.item:nth-of-type(1) {
+--offset: 1;
+background-color: #90f1ef;
+}
+img.item:nth-of-type(2) {
+--offset: 2;
+background-color: #ff70a6;
+}
+img.item:nth-of-type(3) {
+--offset: 3;
+background-color: #ff9770;
+}
+
+input:nth-of-type(1) {
+grid-column: 2 / 3;
+grid-row: 2 / 3;
+}
+input:nth-of-type(1):checked ~ main#carousel {
+--position: 1;
+}
+
+input:nth-of-type(2) {
+grid-column: 3 / 4;
+grid-row: 2 / 3;
+}
+input:nth-of-type(2):checked ~ main#carousel {
+--position: 2;
+}
+
+input:nth-of-type(3) {
+grid-column: 4 /5;
+grid-row: 2 / 3;
+}
+input:nth-of-type(3):checked ~ main#carousel {
+--position: 3;
+}
+
+input {
+    width: 20px;
+    height: 20px;
+}
