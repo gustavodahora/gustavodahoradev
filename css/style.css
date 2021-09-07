@@ -17,12 +17,16 @@ header {
 header ul {
     list-style: none;
     display: flex;
+    font-weight: bold;
 }
 
 a {
     text-decoration: none;
 }
 
+h2 {
+    font-size: 30px;
+}
 
 .person_img img {
     height: 300px;   
@@ -135,4 +139,32 @@ input {
     color: #fdfed4 !important;
     fill: white !important;
     font-size: 60px;
+}
+
+.about_title {
+    margin-top: 70px;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.about div {
+    background-color: rgb(14, 14, 14);
+    height: auto;
+    width: 400px;
+    border-radius: 5px;
+}
+
+.techologies {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.techologies i {
+    font-size: 50px;
+    background-color: rgb(14, 14, 14);
 }
