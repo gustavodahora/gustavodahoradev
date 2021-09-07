@@ -20,3 +20,102 @@ header ul {
 a {
     text-decoration: none;
 }
+
+
+.person_img img {
+    height: 300px;   
+    width: 300px;
+    border-radius: 100%;
+    border: 2px solid #837363;
+    object-fit: cover;
+}
+
+.general_item {
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Carrousel */
+
+.countainer_main {
+    height: 600px;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 500px 100px;
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+main#carousel {
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    --items: 5;
+    --middle: 3;
+    --position: 1;
+    pointer-events: none;
+  }
+  
+  img.item {
+    position: absolute;
+    width: auto;
+    height: 500px;
+    background-color: coral;
+    object-fit: fill;
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transition: all 0.25s linear;
+    transform: rotateY(calc(-10deg * var(--r)))
+      translateX(calc(-300px * var(--r)));
+    z-index: calc((var(--position) - var(--abs)));
+  }
+
+  
+  img.item:nth-of-type(1) {
+    --offset: 1;
+    background-color: #90f1ef;
+  }
+  img.item:nth-of-type(2) {
+    --offset: 2;
+    background-color: #ff70a6;
+  }
+  img.item:nth-of-type(3) {
+    --offset: 3;
+    background-color: #ff9770;
+  }
+  
+  input:nth-of-type(1) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(1):checked ~ main#carousel {
+    --position: 1;
+  }
+  
+  input:nth-of-type(2) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(2):checked ~ main#carousel {
+    --position: 2;
+  }
+  
+  input:nth-of-type(3) {
+    grid-column: 4 /5;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(3):checked ~ main#carousel {
+    --position: 3;
+  }
+
+  
