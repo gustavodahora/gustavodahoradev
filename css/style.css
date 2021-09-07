@@ -26,7 +26,7 @@ a {
     height: 300px;   
     width: 300px;
     border-radius: 100%;
-    border: 2px solid #837363;
+    border: 5px solid #837363;
     object-fit: cover;
 }
 
@@ -44,7 +44,7 @@ a {
     height: 600px;
     margin: 0;
     display: grid;
-    grid-template-rows: 500px 100px;
+    grid-template-rows: 600px 100px;
     grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
     align-items: center;
     justify-items: center;
@@ -53,8 +53,8 @@ a {
 main#carousel {
     grid-row: 1 / 2;
     grid-column: 1 / 8;
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -122,4 +122,15 @@ input:nth-of-type(3):checked ~ main#carousel {
 input {
     width: 20px;
     height: 20px;
+}
+
+.icon_media {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon_media i {
+    color: #fdfed4 !important;
+    fill: white !important;
+    font-size: 60px;
 }
