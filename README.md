@@ -7,3 +7,5 @@ You are currently allowed to copy and send pull requests to improve the items yo
 
 - [@Gustavodahora](https://www.github.com/gustavodahora)
 - [@PatoGordo](https://www.github.com/PatoGordo)
+- [@gbxxy](https://www.github.com/gbxxy)
+- [@machinis](https://www.github.com/joaomdeveloper)
