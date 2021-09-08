@@ -1,188 +1,235 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 * {
-    font-family: 'Poppins', sans-serif;  
-    color: white;
-    background-color: #1a1917;
-    margin-left: 24px;
-    margin-right: 24px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: #1a1917;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
 }
 
 header ul {
-    list-style: none;
-    display: flex;
-    font-weight: bold;
+  list-style: none;
+  display: flex;
+  font-weight: bold;
+  gap: 16px;
+}
+header ul li a {
+  color: #cacaca;
+  transition: all ease 0.3s;
+  font-size: 18px;
+}
+header ul li a:hover {
+  color: white;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 h2 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .person_img img {
-    height: 300px;   
-    width: 300px;
-    border-radius: 100%;
-    border: 5px solid #837363;
-    object-fit: cover;
+  height: 300px;
+  width: 300px;
+  border-radius: 100%;
+  border: 5px solid #837363;
+  object-fit: cover;
 }
 
 .general_item {
-    margin-top: 20;
-    display: flex;
-    flex-wrap: no-wrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 /* Carrousel */
 
 .countainer_main {
-    height: 600px;
-    margin: 0;
-    display: grid;
-    grid-template-rows: 600px 100px;
-    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
-    align-items: center;
-    justify-items: center;
+  height: 600px;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 600px 100px;
+  grid-template-columns: 1fr 30px 30px 30px 1fr;
+  align-items: center;
+  justify-items: center;
 }
 
 main#carousel {
-    grid-row: 1 / 2;
-    grid-column: 1 / 8;
-    width: 600px;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    transform-style: preserve-3d;
-    perspective: 600px;
-    --items: 5;
-    --middle: 3;
-    --position: 1;
-    pointer-events: none;
-}
-  
-img.item {
-position: absolute;
-width: auto;
-height: 500px;
-background-color: coral;
-object-fit: fill;
---r: calc(var(--position) - var(--offset));
---abs: max(calc(var(--r) * -1), var(--r));
-transition: all 0.25s linear;
-transform: rotateY(calc(-10deg * var(--r)))
-    translateX(calc(-300px * var(--r)));
-z-index: calc((var(--position) - var(--abs)));
+  grid-row: 1 / 2;
+  grid-column: 1 / 8;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  --items: 5;
+  --middle: 3;
+  --position: 1;
+  pointer-events: none;
 }
 
+img.item {
+  position: absolute;
+  width: auto;
+  height: 500px;
+  background-color: coral;
+  object-fit: fill;
+  --r: calc(var(--position) - var(--offset));
+  --abs: max(calc(var(--r) * -1), var(--r));
+  transition: all 0.25s linear;
+  transform: rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-300px * var(--r)));
+  z-index: calc((var(--position) - var(--abs)));
+}
 
 img.item:nth-of-type(1) {
---offset: 1;
-background-color: #90f1ef;
+  --offset: 1;
+  background-color: #90f1ef;
 }
 img.item:nth-of-type(2) {
---offset: 2;
-background-color: #ff70a6;
+  --offset: 2;
+  background-color: #ff70a6;
 }
 img.item:nth-of-type(3) {
---offset: 3;
-background-color: #ff9770;
+  --offset: 3;
+  background-color: #ff9770;
 }
 
 input:nth-of-type(1) {
-grid-column: 2 / 3;
-grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
 }
 input:nth-of-type(1):checked ~ main#carousel {
---position: 1;
+  --position: 1;
 }
 
 input:nth-of-type(2) {
-grid-column: 3 / 4;
-grid-row: 2 / 3;
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
 }
 input:nth-of-type(2):checked ~ main#carousel {
---position: 2;
+  --position: 2;
 }
 
 input:nth-of-type(3) {
-grid-column: 4 /5;
-grid-row: 2 / 3;
+  grid-column: 4 /5;
+  grid-row: 2 / 3;
 }
 input:nth-of-type(3):checked ~ main#carousel {
---position: 3;
+  --position: 3;
 }
 
 /*  */
 
 input {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
-
 
 /*  */
 
 .icon_media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(14, 14, 14);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(14, 14, 14);
 }
 
 .icon_media a {
-    background: rgb(14, 14, 14);
+  background: rgb(14, 14, 14);
 }
 
 .icon_media i {
-    color: #fdfed4 !important;
-    fill: white !important;
-    font-size: 60px;
-    background: rgb(14, 14, 14);
+  color: #fdfed4 !important;
+  fill: white !important;
+  font-size: 60px;
+  background: rgb(14, 14, 14);
 }
 
 .about_title {
-    margin-top: 70px;
+  padding-top: 70px;
+  width: 100%;
+  text-align: center;
 }
 
 .about {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+  width: 100%;
+  padding: 32px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  gap: 16px;
 }
 
 .about div {
-    background-color: rgb(14, 14, 14);
-    height: auto;
-    width: 400px;
-    border-radius: 5px;
+  background-color: rgb(14, 14, 14);
+  height: auto;
+  padding: 16px;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .techologies {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
 }
 
 .techologies i {
-    font-size: 50px;
-    background-color: rgb(14, 14, 14);
+  font-size: 50px;
+  background-color: rgb(14, 14, 14);
 }
 
 p {
-    background-color: rgb(14, 14, 14);
+  background-color: rgb(14, 14, 14);
+}
+
+/* Quando o tamanho da página chegar a 1024px ele vai receber essas regras */
+@media screen and (max-width: 1024px) {
+  header h1 {
+    font-size: 24px;
+  }
+  .general_item {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .about {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main#carousel {
+    /* A função min faz verifica se o tamanho do elemento é menor 360px e se for aplica 95vw  */
+    width: min(360px, 95vw);
+  }
 }
