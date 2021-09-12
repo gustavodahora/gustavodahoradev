@@ -1,13 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
+/* #383838 cinza-escuro */
 /* #202020 cinza */
-/* #f2f2f2 branco-cinza*/
+/* #f2f2f2 cinza-claro */
 /* #ff9c2b laranja */
+/* #875F9A Roxo */
+/* #fffc5f Yellow */
+/* #26721f Green */
+
+:root {
+  --cinza-escuro:#202020;
+  --cinza:#383838;
+  --cinza-medio: #585858;
+  --cinza-medio-claro: #a3a3a3;
+  --cinza-claro:#f2f2f2;
+  --laranja:#ff9c2b;
+  --roxo:#db8dff;
+  --yellow:#fffc5f;
+  --green:#26721f;
+}
 
 * {
   font-family: 'JetBrains Mono', monospace;
-  color: #f2f2f2;
-  background-color: #202020;
+  color: var(--cinza-claro);
+  background-color: var(--cinza-escuro);
   box-sizing: border-box;
   scroll-behavior: smooth;
   scroll-padding-top: 16px;
@@ -19,6 +35,12 @@ body {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  user-select: none;
+	overflow-x: hidden;
+}
+
+[type=radio] {
+  display: none;
 }
 
 header {
@@ -35,16 +57,18 @@ header ul {
   gap: 16px;
 }
 header ul li a {
-  color: #cacaca;
+  color: var(--cinza-medio-claro);
   transition: all ease 0.3s;
+  margin-right: 10px;
   font-size: 18px;
 }
 header ul li a:hover {
-  color: #f2f2f2;
+  color: var(--roxo);
 }
 
 a {
   text-decoration: none;
+	cursor: pointer;
 }
 
 h1, a, h2 { 
@@ -52,25 +76,29 @@ h1, a, h2 {
 } 
 h1:hover, a:hover, h2:hover { 
   transition: 0.5s;
-  color: #ff9c2b;
+  color: var(--laranja);
 }
 
 h2 {
   font-size: 30px;
 }
 
+h2:hover {
+  color: var(--roxo);
+}
+
 .person_img img {
   height: 300px;
   width: 300px;
   border-radius: 100%;
-  border: 5px solid white;
+  border: 5px solid var(--cinza);
   object-fit: cover;
   transition: ease-in-out 0.8s; 
 }
 
 .person_img img:hover {
   transition: 0.5s;
-  border: 5px solid #ff9c2b;
+  border: 5px solid var(--laranja);
 }
 
 .general_item {
@@ -92,79 +120,29 @@ h2 {
   justify-items: center;
 }
 
-main#carousel {
-  grid-row: 1 / 2;
-  grid-column: 1 / 8;
-  width: 600px;
-  height: 600px;
+/* Carrousel */
+
+/* AppsImg */
+
+.apps_img {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  transform-style: preserve-3d;
-  perspective: 600px;
-  --items: 5;
-  --middle: 3;
-  --position: 1;
-  pointer-events: none;
+  gap: 30px;
 }
 
-img.item {
-  position: absolute;
+.apps_img img {
   width: auto;
-  height: 500px;
-  background-color: coral;
-  object-fit: fill;
-  --r: calc(var(--position) - var(--offset));
-  --abs: max(calc(var(--r) * -1), var(--r));
-  transition: all 0.25s linear;
-  transform: rotateY(calc(-10deg * var(--r)))
-    translateX(calc(-300px * var(--r)));
-  z-index: calc((var(--position) - var(--abs)));
+  height: 400px;
+  object-fit: cover;
+  border: 2px solid var(--cinza);
+  transition: ease-in-out 0.8s; 
 }
 
-img.item:nth-of-type(1) {
-  --offset: 1;
-  background-color: #90f1ef;
-}
-img.item:nth-of-type(2) {
-  --offset: 2;
-  background-color: #ff70a6;
-}
-img.item:nth-of-type(3) {
-  --offset: 3;
-  background-color: #ff9770;
-}
-
-input:nth-of-type(1) {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(1):checked ~ main#carousel {
-  --position: 1;
-}
-
-input:nth-of-type(2) {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(2):checked ~ main#carousel {
-  --position: 2;
-}
-
-input:nth-of-type(3) {
-  grid-column: 4 /5;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(3):checked ~ main#carousel {
-  --position: 3;
-}
-
-/*  */
-
-input {
-  width: 20px;
-  height: 20px;
+.apps_img img:hover {
+  transition: 0.5s;
+  border: 2px solid var(--laranja);
+  transform: scale(1.02);
   cursor: pointer;
 }
 
@@ -177,13 +155,12 @@ input {
 }
 
 .icon_media i {
-  color: #fdfed4 !important;
-  fill: #f2f2f2 !important;
+  color: var(--laranja) !important;
+  fill: var(--cinza-claro) !important;
   font-size: 60px;
 }
 
 .about_title {
-  padding-top: 70px;
   width: 100%;
   text-align: center;
 }
@@ -200,12 +177,17 @@ input {
 
 .about div {
   height: auto;
-  padding: 16px;
+  padding: 25px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  border: 0.5px solid rgb(85, 85, 85);
+  border: 0.5px solid var(--cinza);
+  transition: ease-in-out 0.8s; 
+}
+
+.about div:hover {
+  border: 0.5px solid var(--cinza-medio-claro);
 }
 
 .techologies {
@@ -218,6 +200,33 @@ input {
 .techologies i {
   font-size: 50px;
 }
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 0.5px solid var(--cinza);
+}
+
+footer img {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  margin-left: 10px;
+}
+
+footer p, footer a {
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--cinza-medio-claro);
+}
+
+footer a:hover {
+  color: var(--roxo);
+  transition: 0.5s;
+}
+/* Footer */
 
 /* Quando o tamanho da página chegar a 1024px ele vai receber essas regras */
 @media screen and (max-width: 1024px) {
