@@ -1,252 +1,295 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
 /* #383838 cinza-escuro */
+
+
 /* #202020 cinza */
+
+
 /* #f2f2f2 cinza-claro */
+
+
 /* #ff9c2b laranja */
+
+
 /* #875F9A Roxo */
+
+
 /* #fffc5f Yellow */
+
+
 /* #26721f Green */
 
 :root {
-  --cinza-escuro:#202020;
-  --cinza:#383838;
-  --cinza-medio: #585858;
-  --cinza-medio-claro: #a3a3a3;
-  --cinza-claro:#f2f2f2;
-  --laranja:#ff9c2b;
-  --roxo:#db8dff;
-  --yellow:#fffc5f;
-  --green:#26721f;
+    --cinza-escuro: #202020;
+    --cinza: #383838;
+    --cinza-medio: #585858;
+    --cinza-medio-claro: #a3a3a3;
+    --cinza-claro: #f2f2f2;
+    --laranja: #ff9c2b;
+    --roxo: #db8dff;
+    --yellow: #fffc5f;
+    --green: #26721f;
 }
 
 * {
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--cinza-claro);
-  background-color: var(--cinza-escuro);
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  scroll-padding-top: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--cinza-claro);
+    background-color: var(--cinza-escuro);
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 16px;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  user-select: none;
-	overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    user-select: none;
+    overflow-x: hidden;
 }
 
 [type=radio] {
-  display: none;
+    display: none;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
 }
 
 header ul {
-  list-style: none;
-  display: flex;
-  font-weight: bold;
-  gap: 16px;
+    list-style: none;
+    display: flex;
+    font-weight: bold;
+    gap: 16px;
 }
+
 header ul li a {
-  color: var(--cinza-medio-claro);
-  transition: all ease 0.3s;
-  margin-right: 10px;
-  font-size: 18px;
+    color: var(--cinza-medio-claro);
+    transition: all ease 0.3s;
+    margin-right: 10px;
+    font-size: 18px;
 }
+
 header ul li a:hover {
-  color: var(--roxo);
+    color: var(--roxo);
 }
 
 a {
-  text-decoration: none;
-	cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-h1, a, h2 { 
-  transition: ease-in-out 0.8s; 
-} 
-h1:hover, a:hover, h2:hover { 
-  transition: 0.5s;
-  color: var(--laranja);
+h1,
+a,
+h2 {
+    transition: ease-in-out 0.8s;
+}
+
+h1:hover,
+a:hover,
+h2:hover {
+    transition: 0.5s;
+    color: var(--laranja);
 }
 
 h2 {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 h2:hover {
-  color: var(--roxo);
+    color: var(--roxo);
 }
 
 .person_img img {
-  height: 300px;
-  width: 300px;
-  border-radius: 100%;
-  border: 5px solid var(--cinza);
-  object-fit: cover;
-  transition: ease-in-out 0.8s; 
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    border: 5px solid var(--cinza);
+    object-fit: cover;
+    transition: ease-in-out 0.8s;
 }
 
 .person_img img:hover {
-  transition: 0.5s;
-  border: 5px solid var(--laranja);
+    transition: 0.5s;
+    border: 5px solid var(--laranja);
 }
 
 .general_item {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
-  align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
+
 
 /* Carrousel */
 
 .countainer_main {
-  height: 600px;
-  margin: 0;
-  display: grid;
-  grid-template-rows: 600px 100px;
-  grid-template-columns: 1fr 30px 30px 30px 1fr;
-  align-items: center;
-  justify-items: center;
+    height: 600px;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 600px 100px;
+    grid-template-columns: 1fr 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
 }
 
+
 /* Carrousel */
+
 
 /* AppsImg */
 
 .apps_img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.apps_img p {
+    color: var(--cinza-medio-claro);
+    font-weight: bold;
+    transition: ease-in-out 0.8s;
+}
+
+.apps_img p:hover {
+    transition: 0.5s;
+    color: var(--roxo);
 }
 
 .apps_img img {
-  width: auto;
-  height: 400px;
-  object-fit: cover;
-  border: 2px solid var(--cinza);
-  transition: ease-in-out 0.8s; 
+    width: auto;
+    height: 400px;
+    object-fit: cover;
+    border: 2px solid var(--cinza);
+    transition: ease-in-out 0.8s;
 }
 
 .apps_img img:hover {
-  transition: 0.5s;
-  border: 2px solid var(--laranja);
-  transform: scale(1.02);
-  cursor: pointer;
+    transition: 0.5s;
+    border: 2px solid var(--laranja);
+    transform: scale(1.02);
+    cursor: pointer;
+    color: var(--roxo);
 }
+
 
 /*  */
 
 .icon_media {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .icon_media i {
-  color: var(--laranja) !important;
-  fill: var(--cinza-claro) !important;
-  font-size: 60px;
+    color: var(--laranja) !important;
+    fill: var(--cinza-claro) !important;
+    font-size: 60px;
 }
 
 .about_title {
-  width: 100%;
-  text-align: center;
+    width: 100%;
+    text-align: center;
 }
 
 .about {
-  width: 100%;
-  padding: 32px;
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  margin-bottom: 50px;
-  gap: 16px;
+    width: 100%;
+    padding: 32px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    gap: 16px;
 }
 
 .about div {
-  height: auto;
-  padding: 25px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  border: 0.5px solid var(--cinza);
-  transition: ease-in-out 0.8s; 
+    height: auto;
+    padding: 25px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 0.5px solid var(--cinza);
+    transition: ease-in-out 0.8s;
 }
 
 .about div:hover {
-  border: 0.5px solid var(--cinza-medio-claro);
+    border: 0.5px solid var(--cinza-medio-claro);
 }
 
 .techologies {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
 }
 
 .techologies i {
-  font-size: 50px;
+    font-size: 50px;
 }
 
+
 /* Footer */
+
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top: 0.5px solid var(--cinza);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 0.5px solid var(--cinza);
 }
 
 footer img {
-  width: 25px;
-  height: 25px;
-  border-radius: 100%;
-  margin-left: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    margin-left: 10px;
 }
 
-footer p, footer a {
-  font-weight: bold;
-  font-size: 14px;
-  color: var(--cinza-medio-claro);
+footer p,
+footer a {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--cinza-medio-claro);
 }
 
 footer a:hover {
-  color: var(--roxo);
-  transition: 0.5s;
+    color: var(--roxo);
+    transition: 0.5s;
 }
+
+
 /* Footer */
 
+
 /* Quando o tamanho da página chegar a 1024px ele vai receber essas regras */
+
 @media screen and (max-width: 1024px) {
-  header h1 {
-    font-size: 24px;
-  }
-  .general_item {
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  .about {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  main#carousel {
-    /* A função min faz verifica se o tamanho do elemento é menor 360px e se for aplica 95vw  */
-    width: min(360px, 95vw);
-  }
+    header h1 {
+        font-size: 24px;
+    }
+    .general_item {
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .about {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    main#carousel {
+        /* A função min faz verifica se o tamanho do elemento é menor 360px e se for aplica 95vw  */
+        width: min(360px, 95vw);
+    }
 }
