@@ -147,6 +147,7 @@ h2:hover {
 /* AppsImg */
 
 .apps_img {
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,7 +204,7 @@ h2:hover {
 
 .about {
     width: 100%;
-    padding: 32px;
+    padding: 0 32px 32px 32px;
     display: flex;
     align-items: stretch;
     justify-content: space-between;
@@ -291,5 +292,60 @@ footer a:hover {
     main#carousel {
         /* A função min faz verifica se o tamanho do elemento é menor 360px e se for aplica 95vw  */
         width: min(360px, 95vw);
+    }
+}
+
+@media screen and (max-width: 720px) {
+    body {
+        max-width: 600px;
+    }
+    header h1 {
+        font-size: 18px;
+    }
+    header ul li a {
+        font-size: 14px;
+    }
+    .person_img img {
+        width: 200px;
+        height: 200px;
+    }
+    header ul {
+        flex-direction: column;
+    }
+    .general_item {
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .apps_img img {
+        height: 500px;
+    }
+    .apps_img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    .about {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    main#carousel {
+        /* A função min faz verifica se o tamanho do elemento é menor 360px e se for aplica 95vw  */
+        width: min(360px, 95vw);
+    }
+}
+
+@media screen and (max-width: 360px) {
+    body {
+        max-width: 500px;
+    }
+    .apps_img img {
+        height: 400px;
     }
 }
