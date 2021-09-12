@@ -166,7 +166,7 @@ h2:hover {
     color: var(--roxo);
 }
 
-.apps_img img {
+.apps_img .app_image {
     width: auto;
     height: 400px;
     object-fit: cover;
@@ -174,7 +174,7 @@ h2:hover {
     transition: ease-in-out 0.8s;
 }
 
-.apps_img img:hover {
+.apps_img .app_image:hover {
     transition: 0.5s;
     border: 2px solid var(--laranja);
     transform: scale(1.02);
@@ -182,26 +182,52 @@ h2:hover {
     color: var(--roxo);
 }
 
+.app:hover>a p {
+    transition: 0.5s;
+    color: var(--roxo);
+}
+
+.app:hover>div .github_icon {
+    opacity: 100;
+    transition: 2s;
+}
+
+
+/* .github_icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    opacity: 0;
+    transition: ease-in-out 0.7s;
+} */
+
+
+/* .app div { */
+
+
+/* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+
+
+}
 
 /*  */
-
 .icon_media {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .icon_media i {
     color: var(--laranja) !important;
     fill: var(--cinza-claro) !important;
     font-size: 60px;
 }
-
 .about_title {
     width: 100%;
     text-align: center;
 }
-
 .about {
     width: 100%;
     padding: 0 32px 32px 32px;
@@ -211,7 +237,6 @@ h2:hover {
     margin-bottom: 50px;
     gap: 16px;
 }
-
 .about div {
     height: auto;
     padding: 25px;
@@ -222,61 +247,51 @@ h2:hover {
     border: 0.5px solid var(--cinza);
     transition: ease-in-out 0.8s;
 }
-
 .about div:hover {
     border: 0.5px solid var(--cinza-medio-claro);
 }
-
 .techologies {
     display: flex;
     justify-content: center;
     padding: 20px;
     align-items: center;
 }
-
 .techologies i {
     font-size: 50px;
 }
 
-
 /* Footer */
-
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
     border-top: 0.5px solid var(--cinza);
 }
-
 footer img {
     width: 25px;
     height: 25px;
     border-radius: 100%;
     margin-left: 10px;
 }
-
 footer p,
 footer a {
     font-weight: bold;
     font-size: 14px;
     color: var(--cinza-medio-claro);
 }
-
 footer a:hover {
     color: var(--roxo);
     transition: 0.5s;
 }
 
-
 /* Footer */
 
-
 /* Quando o tamanho da página chegar a 1024px ele vai receber essas regras */
-
 @media screen and (max-width: 1024px) {
     header h1 {
         font-size: 24px;
     }
+    
     .general_item {
         flex-direction: column;
         flex-wrap: wrap;
@@ -284,34 +299,40 @@ footer a:hover {
         justify-content: center;
         align-items: center;
     }
+    
     .about {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
+    
     main#carousel {
         /* A função min faz verifica se o tamanho do elemento é menor 360px e se for aplica 95vw  */
         width: min(360px, 95vw);
     }
 }
-
 @media screen and (max-width: 720px) {
     body {
         max-width: 600px;
     }
+    
     header h1 {
         font-size: 18px;
     }
+    
     header ul li a {
         font-size: 14px;
     }
+    
     .person_img img {
         width: 200px;
         height: 200px;
     }
+    
     header ul {
         flex-direction: column;
     }
+    
     .general_item {
         flex-direction: column;
         flex-wrap: wrap;
@@ -319,9 +340,11 @@ footer a:hover {
         justify-content: center;
         align-items: center;
     }
+    
     .apps_img img {
         height: 500px;
     }
+    
     .apps_img {
         display: flex;
         align-items: center;
@@ -330,21 +353,23 @@ footer a:hover {
         gap: 30px;
         text-align: center;
     }
+    
     .about {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
+    
     main#carousel {
         /* A função min faz verifica se o tamanho do elemento é menor 360px e se for aplica 95vw  */
         width: min(360px, 95vw);
     }
 }
-
 @media screen and (max-width: 360px) {
     body {
         max-width: 500px;
     }
+    
     .apps_img img {
         height: 400px;
     }
