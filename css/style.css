@@ -396,6 +396,12 @@ p {
     background: var(--cinza-escuro-dark);
 }
 
+.about_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 
 /* About */
 
