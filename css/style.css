@@ -9,6 +9,7 @@
     --roxo: #db8dff;
     --yellow: #fffc5f;
     --green: #26721f;
+    --cinza-escuro-dark: #1b1b1b;
 }
 
 
@@ -207,13 +208,40 @@ header ul li a:hover {
 
 .about div {
     height: auto;
-    padding: 25px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     border: 0.5px solid var(--cinza);
     transition: ease-in-out 0.8s;
+}
+
+.techologies,
+.about_text,
+.icon_media {
+    padding: 25px;
+}
+
+.technologies_objects {
+    display: flex;
+    padding: 7px 4px 7px 4px;
+    margin: 5px;
+    background: var(--cinza-escuro-dark);
+    flex-direction: column;
+}
+
+p {
+    margin: 0;
+    margin-top: 5px;
+}
+
+.technologies_objects p {
+    background: var(--cinza-escuro-dark);
+    font-weight: bold;
+}
+
+.technologies_objects:hover {
+    transform: scale(1.08);
 }
 
 .about div:hover {
@@ -223,12 +251,13 @@ header ul li a:hover {
 .techologies {
     display: flex;
     justify-content: center;
-    padding: 20px;
     align-items: center;
 }
 
-.techologies i {
-    font-size: 50px;
+.techologies img {
+    width: 45px;
+    height: 45px;
+    background: var(--cinza-escuro-dark);
 }
 
 
