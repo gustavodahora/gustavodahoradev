@@ -504,6 +504,9 @@ footer a:hover {
         /* A função min faz verifica se o tamanho do elemento é menor 360px e se for aplica 95vw  */
         width: min(360px, 95vw);
     }
+    .div_braces_text {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 360px) {
