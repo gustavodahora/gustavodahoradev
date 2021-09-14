@@ -202,7 +202,7 @@ header ul li a:hover {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     gap: 16px;
 }
 
@@ -285,6 +285,7 @@ footer a {
     font-weight: bold;
     font-size: 14px;
     color: var(--cinza-medio-claro);
+    margin: 10px 0 10px 0;
 }
 
 footer a:hover {
