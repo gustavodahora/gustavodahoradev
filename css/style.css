@@ -185,10 +185,12 @@ header ul li a:hover {
     align-items: center;
 }
 
-.icon_media i {
-    color: var(--laranja) !important;
+.icon_media i,
+img {
     fill: var(--cinza-claro) !important;
     font-size: 60px;
+    width: 60px;
+    height: 60px;
 }
 
 .about_title {
