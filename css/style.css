@@ -1,25 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
-
-/* #383838 cinza-escuro */
-
-
-/* #202020 cinza */
-
-
-/* #f2f2f2 cinza-claro */
-
-
-/* #ff9c2b laranja */
-
-
-/* #875F9A Roxo */
-
-
-/* #fffc5f Yellow */
-
-
-/* #26721f Green */
-
 :root {
     --cinza-escuro: #202020;
     --cinza: #383838;
@@ -32,6 +11,9 @@
     --green: #26721f;
 }
 
+
+/* Changing all */
+
 * {
     font-family: 'JetBrains Mono', monospace;
     color: var(--cinza-claro);
@@ -39,45 +21,6 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     scroll-padding-top: 16px;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    user-select: none;
-    overflow-x: hidden;
-}
-
-[type=radio] {
-    display: none;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 32px;
-}
-
-header ul {
-    list-style: none;
-    display: flex;
-    font-weight: bold;
-    gap: 16px;
-}
-
-header ul li a {
-    color: var(--cinza-medio-claro);
-    transition: all ease 0.3s;
-    margin-right: 10px;
-    font-size: 18px;
-}
-
-header ul li a:hover {
-    color: var(--roxo);
 }
 
 a {
@@ -106,6 +49,59 @@ h2:hover {
     color: var(--roxo);
 }
 
+
+/* Changing all */
+
+
+/* Body */
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+
+/* Body */
+
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    font-weight: bold;
+    gap: 16px;
+}
+
+header ul li a {
+    color: var(--cinza-medio-claro);
+    transition: all ease 0.3s;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+header ul li a:hover {
+    color: var(--roxo);
+}
+
+
+/* Header */
+
+
+/* Main */
+
 .person_img img {
     height: 300px;
     width: 300px;
@@ -126,22 +122,6 @@ h2:hover {
     justify-content: space-evenly;
     align-items: center;
 }
-
-
-/* Carrousel */
-
-.countainer_main {
-    height: 600px;
-    margin: 0;
-    display: grid;
-    grid-template-rows: 600px 100px;
-    grid-template-columns: 1fr 30px 30px 30px 1fr;
-    align-items: center;
-    justify-items: center;
-}
-
-
-/* Carrousel */
 
 
 /* AppsImg */
@@ -193,41 +173,28 @@ h2:hover {
 }
 
 
-/* .github_icon {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    opacity: 0;
-    transition: ease-in-out 0.7s;
-} */
+/* Main */
 
 
-/* .app div { */
+/* About */
 
-
-/* display: flex;
-    justify-content: space-between;
-    align-items: center; */
-
-
-}
-
-/*  */
 .icon_media {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .icon_media i {
     color: var(--laranja) !important;
     fill: var(--cinza-claro) !important;
     font-size: 60px;
 }
+
 .about_title {
     width: 100%;
     text-align: center;
 }
+
 .about {
     width: 100%;
     padding: 0 32px 32px 32px;
@@ -237,6 +204,7 @@ h2:hover {
     margin-bottom: 50px;
     gap: 16px;
 }
+
 .about div {
     height: auto;
     padding: 25px;
@@ -247,51 +215,64 @@ h2:hover {
     border: 0.5px solid var(--cinza);
     transition: ease-in-out 0.8s;
 }
+
 .about div:hover {
     border: 0.5px solid var(--cinza-medio-claro);
 }
+
 .techologies {
     display: flex;
     justify-content: center;
     padding: 20px;
     align-items: center;
 }
+
 .techologies i {
     font-size: 50px;
 }
 
+
+/* About */
+
+
 /* Footer */
+
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
     border-top: 0.5px solid var(--cinza);
 }
+
 footer img {
     width: 25px;
     height: 25px;
     border-radius: 100%;
     margin-left: 10px;
 }
+
 footer p,
 footer a {
     font-weight: bold;
     font-size: 14px;
     color: var(--cinza-medio-claro);
 }
+
 footer a:hover {
     color: var(--roxo);
     transition: 0.5s;
 }
 
+
 /* Footer */
 
+
 /* Quando o tamanho da página chegar a 1024px ele vai receber essas regras */
+
 @media screen and (max-width: 1024px) {
     header h1 {
         font-size: 24px;
     }
-    
     .general_item {
         flex-direction: column;
         flex-wrap: wrap;
@@ -299,40 +280,34 @@ footer a:hover {
         justify-content: center;
         align-items: center;
     }
-    
     .about {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    
     main#carousel {
         /* A função min faz verifica se o tamanho do elemento é menor 360px e se for aplica 95vw  */
         width: min(360px, 95vw);
     }
 }
+
 @media screen and (max-width: 720px) {
     body {
         max-width: 600px;
     }
-    
     header h1 {
         font-size: 18px;
     }
-    
     header ul li a {
         font-size: 14px;
     }
-    
     .person_img img {
         width: 200px;
         height: 200px;
     }
-    
     header ul {
         flex-direction: column;
     }
-    
     .general_item {
         flex-direction: column;
         flex-wrap: wrap;
@@ -340,11 +315,9 @@ footer a:hover {
         justify-content: center;
         align-items: center;
     }
-    
     .apps_img img {
         height: 500px;
     }
-    
     .apps_img {
         display: flex;
         align-items: center;
@@ -353,23 +326,21 @@ footer a:hover {
         gap: 30px;
         text-align: center;
     }
-    
     .about {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    
     main#carousel {
         /* A função min faz verifica se o tamanho do elemento é menor 360px e se for aplica 95vw  */
         width: min(360px, 95vw);
     }
 }
+
 @media screen and (max-width: 360px) {
     body {
         max-width: 500px;
     }
-    
     .apps_img img {
         height: 400px;
     }
