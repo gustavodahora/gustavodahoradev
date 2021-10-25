@@ -438,10 +438,22 @@ footer a:hover {
 
 /* Footer */
 
-
 /* Quando o tamanho da página chegar a 1024px ele vai receber essas regras */
 
+@media screen and (max-width: 1450px) {
+    .braces {
+        display: none;
+    }
+    .div_braces_text {
+        display: none;
+    }
+}
+
+
 @media screen and (max-width: 1024px) {
+    .braces {
+        display: none;
+    }
     header h1 {
         font-size: 24px;
     }
@@ -460,6 +472,9 @@ footer a:hover {
     main#carousel {
         /* A função min faz verifica se o tamanho do elemento é menor 360px e se for aplica 95vw  */
         width: min(360px, 95vw);
+    }
+    .div_braces_text {
+        display: none;
     }
 }
 
