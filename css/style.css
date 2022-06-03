@@ -242,6 +242,7 @@ main {
   object-fit: cover;
   border: 2px solid var(--cinza);
   transition: ease-in-out 0.8s;
+  border-radius: 20px;
 }
 
 .apps_img .app_image:hover {
@@ -251,6 +252,7 @@ main {
   cursor: pointer;
   color: var(--roxo);
 }
+
 
 .app:hover > a p {
   transition: 0.5s;
