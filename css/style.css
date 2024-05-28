@@ -347,6 +347,10 @@ img {
   align-items: center;
 }
 
+.compose_text {
+  text-align: center;
+}
+
 p {
   margin: 0;
   margin-top: 5px;
